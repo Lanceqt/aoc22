@@ -1,4 +1,4 @@
-with open("./input.txt") as f:
+with open("./aoc22/1/input.txt") as f:
     contents = f.readlines()
 
 
