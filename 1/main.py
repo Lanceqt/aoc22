@@ -21,7 +21,7 @@ total_calories = 0
 # Iterate over the list of strings
 for line in lines:
     # If the current string is a blank line, move on to the next Elf
-    if line == "":
+    if line == "\n":
         current_elf += 1
         total_calories = 0
     else:
@@ -31,5 +31,8 @@ for line in lines:
         # Convert the current string to an integer and add it to the total number of Calories carried by the current Elf
         total_calories += int(line)
 
+        # Update the maximum total number of Calories seen so far, if necessary
+        max_calories = max(max_calories, total_calories)
+
 # Print the result
-print(f"Elf {current_elf} is carrying the most Calories ({total_calories}).")
+print(f"Elf {current_elf} is carrying the most Calories ({max_calories}).")
