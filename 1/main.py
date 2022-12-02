@@ -1,8 +1,8 @@
 with open("./aoc22/1/input.txt") as f:
-    contents = f.readlines()
-
+    for line in f:
+        print(line.strip())
 
 if __name__ == "__main__":
-    print(f"{contents}")
+    print("default")
 else:
     print("Error")
